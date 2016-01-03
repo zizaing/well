@@ -1,0 +1,24 @@
+Wangzhichao
+自定义Dashboard实现加密WEB/Streaming/FileAccess下载速率。三个业务，每个两个页面，下载速率和钻取详单。
+需要的维度为：时间、粒度（15分钟，60分钟，天），接入网类型、区域类型、区域对象。（此处照抄SQM业务质量分析）。
+
+//表格中指标，加密业务次数，下载速率。
+两个指标。，业务请求次数，下载速率。
+图中为指标趋势，点击钻取到详单。
+
+自定义功能实现SDR。
+加密WEB/Streaming/FileAccess单据都放在Other表中，用RecordType和Flag过滤
+
+请求次数公式：
+指标的计算公式为：
+
+FileAccess上传速率。如果有，就是3个指标。
+
+SEQ和Nastar的异同点
+相同点：指标的公式相同
+差异点：维度不同，评估和定界都有差异，SEQ是全网评估定界，Nastar是重点区域的评估定界。部署不同，在SEQ和Nastar独立部署时，SEQ只安装“PS KQI分析”，Nastar只安装“Nastar KQI分析”； 在SEQ和Nastar共部署时，同时安装“PS KQI分析”和 “Nastar KQI分析”。跳转不同，SEQ不支持跳转定位，因为SEQ是全网定界，没有对应的定位分析。
+
+DPU配置。
+395软参配置。
+其他软参配置说明。
+
